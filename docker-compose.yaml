@@ -1,0 +1,37 @@
+version: '3.1'
+
+services:
+  web:
+    image: nginx
+    volumes:
+     - ./conf/nginx-conf.d:/etc/nginx/conf.d
+    ports:
+     - 9001:80
+
+  wordpress:
+    image: wordpress
+    restart: always
+    environment:
+      WORDPRESS_DB_HOST: db
+      WORDPRESS_DB_USER: local
+      WORDPRESS_DB_PASSWORD: local
+      WORDPRESS_DB_NAME: local
+    volumes:
+      - ./backend:/var/www/html
+      - ./conf/apache2-sites-available:/etc/apache2/sites-available
+
+  db:
+    image: mysql:5.7
+    restart: always
+    ports:
+      - 9002:3306
+    environment:
+      MYSQL_DATABASE: local
+      MYSQL_USER: local
+      MYSQL_PASSWORD: local
+      MYSQL_RANDOM_ROOT_PASSWORD: '1'
+    volumes:
+      - db:/var/lib/mysql
+
+volumes:
+  db:
