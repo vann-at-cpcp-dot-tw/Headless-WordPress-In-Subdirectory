@@ -2,6 +2,10 @@
 把 WordPress 安裝在子資料夾，讓前後端使用同一個 Domain，以求簡單快速地解決因瀏覽器 CORS 政策無法攜帶 credentials cookies 的問題
 
 ## Usage
+- 建立前後端資料夾
+``` bash
+mkdir backend frontend
+```
 
 - 起 Docker 服務
 ```bash
@@ -13,6 +17,8 @@ docker compose up
 cd backend
 npx degit git@github.com:WordPress/WordPress.git
 ```
+
+- 將 backend-sample 內的必要設定檔，同步到 backend 資料夾
 
 - 進入瀏覽器將 WordPress 初始化： [http://localhost:9001/backend](http://localhost:9001/backend)
 
