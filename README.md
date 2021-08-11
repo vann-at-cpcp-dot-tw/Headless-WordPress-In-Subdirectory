@@ -19,7 +19,6 @@ npx degit git@github.com:WordPress/WordPress.git
 ```
 
 4. 將 backend-sample 內的必要設定檔，同步到 backend 資料夾
-
-5. 進入瀏覽器將 WordPress 初始化： [http://localhost:9001/backend](http://localhost:9001/backend)
-
-6. 將前端檔案放進 frontend 資料夾，起 node 服務，快樂使用 Headless WordPress
+5. 進入 [http://localhost:9001/backend](http://localhost:9001/backend) 將 WordPress 初始化
+7. 將前端專案(如：Next.js、Create React App)放入 frontend 資料夾
+8. 起 node 服務，快樂使用 Headless WordPress
