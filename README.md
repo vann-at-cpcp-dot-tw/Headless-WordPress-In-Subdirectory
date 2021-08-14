@@ -12,18 +12,11 @@ npx degit git@github.com:vann-at-cpcp-dot-tw/Headless-WordPress-In-Subdirectory.
 mkdir backend frontend
 ```
 
-3. 起 Docker 服務
+3. 起 Docker 服務 (會順便將 WordPress 檔案下載回來)
 ```bash
 docker compose up
 ```
-
-4. 將 WordPress 檔案下載至 backend 資夾
-```bash
-cd backend
-npx degit git@github.com:WordPress/WordPress.git
-```
-
-5. 將 backend-sample 內的必要設定檔，同步到 backend 資料夾
-6. 進入 [http://localhost:9001/backend](http://localhost:9001/backend) 將 WordPress 初始化
-7. 將前端專案(如：Next.js、Create React App)放入 frontend 資料夾，並啟動前端服務
-8. 快樂使用 Headless WordPress
+4. 將 backend-sample 內的必要設定檔，同步到 backend 資料夾
+5. 進入 [http://localhost:9001/backend](http://localhost:9001/backend) 將 WordPress 初始化
+6. 將前端專案(如：Next.js、Create React App)放入 frontend 資料夾，並啟動前端服務
+7. 快樂使用 Headless WordPress
