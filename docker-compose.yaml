@@ -30,8 +30,8 @@ services:
       MYSQL_USER: local
       MYSQL_PASSWORD: local
       MYSQL_RANDOM_ROOT_PASSWORD: '1'
-    volumes:
-      - db:/var/lib/mysql
+    # volumes:
+    #   - db:/var/lib/mysql
 
-volumes:
-  db:
+# volumes:
+#   db:
